@@ -7837,6 +7837,48 @@ BattleScript_IntimidateLoopIncrement:
 	pause B_WAIT_TIME_MED
 	end3
 
+BattleScript_NobleAuraActivates::
+	savetarget
+.if B_ABILITY_POP_UP == TRUE
+	showabilitypopup BS_ATTACKER
+	pause B_WAIT_TIME_LONG
+	destroyabilitypopup
+.endif
+	setbyte gBattlerTarget, 0
+BattleScript_NobleAuraLoop:
+	jumpifbyteequal gBattlerTarget, gBattlerAttacker, BattleScript_NobleAuraLoopIncrement
+	jumpiftargetally BattleScript_NobleAuraLoopIncrement
+	jumpifabsent BS_TARGET, BattleScript_NobleAuraLoopIncrement
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_NobleAuraLoopIncrement
+.if B_UPDATED_INTIMIDATE >= GEN_8 @These abilties specifically prevent just intimidate, without blocking stat decreases
+	jumpifability BS_TARGET, ABILITY_INNER_FOCUS, BattleScript_IntimidatePrevented
+	jumpifability BS_TARGET, ABILITY_SCRAPPY, BattleScript_IntimidatePrevented
+	jumpifability BS_TARGET, ABILITY_OWN_TEMPO, BattleScript_IntimidatePrevented
+	jumpifability BS_TARGET, ABILITY_OBLIVIOUS, BattleScript_IntimidatePrevented
+.endif
+	jumpifability BS_TARGET, ABILITY_GUARD_DOG, BattleScript_NobleAuraInReverse
+BattleScript_NobleAuraEffect:
+	copybyte sBATTLER, gBattlerAttacker
+	setstatchanger STAT_SPATK, 1, TRUE
+	statbuffchange STAT_CHANGE_NOT_PROTECT_AFFECTED | STAT_CHANGE_ALLOW_PTR, BattleScript_NobleAuraLoopIncrement
+	setgraphicalstatchangevalues
+	jumpifability BS_TARGET, ABILITY_CONTRARY, BattleScript_IntimidateContrary
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_DECREASE, BattleScript_IntimidateWontDecrease
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_PKMNCUTSSPATTACKWITH
+BattleScript_NobleAuraEffect_WaitString:
+	waitmessage B_WAIT_TIME_LONG
+	copybyte sBATTLER, gBattlerTarget
+	call BattleScript_TryIntimidateHoldEffects
+BattleScript_NobleAuraLoopIncrement:
+	addbyte gBattlerTarget, 1
+	jumpifbytenotequal gBattlerTarget, gBattlersCount, BattleScript_NobleAuraLoop
+	copybyte sBATTLER, gBattlerAttacker
+	destroyabilitypopup
+	restoretarget
+	pause B_WAIT_TIME_MED
+	end3
+
 BattleScript_IntimidatePrevented:
 	copybyte sBATTLER, gBattlerTarget
 	call BattleScript_AbilityPopUp
@@ -7864,6 +7906,14 @@ BattleScript_IntimidateInReverse:
 	modifybattlerstatstage BS_TARGET, STAT_ATK, INCREASE, 1, BattleScript_IntimidateLoopIncrement, ANIM_ON
 	call BattleScript_TryIntimidateHoldEffects
 	goto BattleScript_IntimidateLoopIncrement
+
+BattleScript_NobleAuraInReverse:
+	copybyte sBATTLER, gBattlerTarget
+	call BattleScript_AbilityPopUpTarget
+	pause B_WAIT_TIME_SHORT
+	modifybattlerstatstage BS_TARGET, STAT_ATK, INCREASE, 1, BattleScript_NobleAuraLoopIncrement, ANIM_ON
+	call BattleScript_TryIntimidateHoldEffects
+	goto BattleScript_NobleAuraLoopIncrement
 
 BattleScript_SupersweetSyrupActivates::
  	savetarget
