@@ -5770,8 +5770,7 @@ static const struct LevelUpMove sFarigirafLevelUpLearnset[] = {
 
 #if P_FAMILY_PINECO
 static const struct LevelUpMove sPinecoLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_TACKLE),
-    LEVEL_UP_MOVE( 1, MOVE_PROTECT),
+    LEVEL_UP_MOVE( 1, MOVE_SUBSTITUTE),
     LEVEL_UP_MOVE( 6, MOVE_SELF_DESTRUCT),
     LEVEL_UP_MOVE( 9, MOVE_BUG_BITE),
     LEVEL_UP_MOVE(12, MOVE_TAKE_DOWN),

@@ -2415,4 +2415,11 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Lowers the foe's Sp.Atk."),
         .aiRating = 7,
     },
+
+    [ABILITY_SHREDDER] =
+    {
+        .name = _("Shredder"),
+        .description = COMPOUND_STRING("Destroys Substitutes."),
+        .aiRating = 6,
+    },
 };

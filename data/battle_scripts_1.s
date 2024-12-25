@@ -10129,3 +10129,11 @@ BattleScript_EffectSnow::
 	call BattleScript_CheckPrimalWeather
 	setfieldweather ENUM_WEATHER_SNOW
 	goto BattleScript_MoveWeatherChange
+
+BattleScript_ShredderActivates::
+	showabilitypopup BS_ATTACKER
+	pause B_WAIT_TIME_LONG
+	destroyabilitypopup
+	playanimation BS_TARGET, B_ANIM_SUBSTITUTE_FADE
+	printstring STRINGID_PKMNSUBSTITUTEFADED
+	return
