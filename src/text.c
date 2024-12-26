@@ -106,6 +106,7 @@ static const struct GlyphWidthFunc sGlyphWidthFuncs[] =
     { FONT_NARROWER,       GetGlyphWidth_Narrower },
     { FONT_SMALL_NARROWER, GetGlyphWidth_SmallNarrower },
     { FONT_SHORT_NARROW,   GetGlyphWidth_ShortNarrow },
+    { FONT_SHORT_NARROWER, GetGlyphWidth_ShortNarrower },
     { FONT_BW_SUMMARY_SCREEN, GetGlyphWidth_Short },
 };
 
@@ -265,6 +266,16 @@ static const struct FontInfo sFontInfos[] =
         .bgColor = 1,
         .shadowColor = 3,
     },
+    [FONT_SHORT_NARROWER] = {
+        .fontFunction = FontFunc_ShortNarrower,
+        .maxLetterWidth = 5,
+        .maxLetterHeight = 14,
+        .letterSpacing = 0,
+        .lineSpacing = 0,
+        .fgColor = 2,
+        .bgColor = 1,
+        .shadowColor = 3,
+    },
     [FONT_BW_SUMMARY_SCREEN] = {
         .fontFunction = FontFunc_BW_Summary_Screen,
         .maxLetterWidth = 6,
@@ -292,6 +303,7 @@ static const u8 sMenuCursorDimensions[][2] =
     [FONT_NARROWER]       = { 8,  15 },
     [FONT_SMALL_NARROWER] = { 8,   8 },
     [FONT_SHORT_NARROW]   = { 8,  14 },
+    [FONT_SHORT_NARROWER] = { 8,  14 },
     [FONT_BW_SUMMARY_SCREEN] = { 8,  14 },
 };
 
@@ -862,6 +874,18 @@ static u16 FontFunc_ShortNarrow(struct TextPrinter *textPrinter)
     if (subStruct->hasFontIdBeenSet == FALSE)
     {
         subStruct->fontId = FONT_SHORT_NARROW;
+        subStruct->hasFontIdBeenSet = TRUE;
+    }
+    return RenderText(textPrinter);
+}
+
+static u16 FontFunc_ShortNarrower(struct TextPrinter *textPrinter)
+{
+    struct TextPrinterSubStruct *subStruct = (struct TextPrinterSubStruct *)(&textPrinter->subStructFields);
+
+    if (subStruct->hasFontIdBeenSet == FALSE)
+    {
+        subStruct->fontId = FONT_SHORT_NARROWER;
         subStruct->hasFontIdBeenSet = TRUE;
     }
     return RenderText(textPrinter);
