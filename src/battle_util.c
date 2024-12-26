@@ -6176,10 +6176,10 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && IsBattlerAlive (gBattlerTarget)
              && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
-             && GetBattlerHoldEffect(gBattlerAttacker, TRUE) != HOLD_EFFECT_PROTECTIVE_PADS
+             && (GetBattlerHoldEffect(gBattlerAttacker, TRUE) != HOLD_EFFECT_PROTECTIVE_PADS)
              && IsMoveMakingContact(move, gBattlerAttacker)
              && DoesSubstituteBlockMove(gBattlerAttacker, gBattlerTarget, move)
-             && gDisableStructs[gBattlerTarget].substituteHP > 0)
+             && (gDisableStructs[gBattlerTarget].substituteHP > 0))
              {
                 gDisableStructs[gBattlerTarget].substituteHP = 0;
                 PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
