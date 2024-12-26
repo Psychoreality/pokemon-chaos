@@ -21,7 +21,11 @@ enum {
     FONT_NARROWER,
     FONT_SMALL_NARROWER,
     FONT_SHORT_NARROW,
+<<<<<<< HEAD
     FONT_SHORT_NARROWER,
+=======
+    FONT_BW_SUMMARY_SCREEN,
+>>>>>>> b3909d5dabc961751034880596a5523ebba23710
 };
 
 // Return values for font functions
