@@ -101,9 +101,9 @@ const union AnimCmd sSpriteAnim_TypeIcon_Steel[] =
     ANIMCMD_FRAME(TYPE_ICON_1_FRAME(TYPE_STEEL), 0),
     ANIMCMD_END
 };
-const union AnimCmd sSpriteAnim_TypeIcon_Mystery[] =
+const union AnimCmd sSpriteAnim_TypeIcon_Sound[] =
 {
-    ANIMCMD_FRAME(TYPE_ICON_1_FRAME(TYPE_MYSTERY), 0),
+    ANIMCMD_FRAME(TYPE_ICON_1_FRAME(TYPE_SOUND), 0),
     ANIMCMD_END
 };
 
@@ -152,10 +152,15 @@ const union AnimCmd sSpriteAnim_TypeIcon_Fairy[] =
     ANIMCMD_FRAME(TYPE_ICON_2_FRAME(TYPE_FAIRY), 0),
     ANIMCMD_END
 };
+const union AnimCmd sSpriteAnim_TypeIcon_Monster[] =
+{
+    ANIMCMD_FRAME(TYPE_ICON_2_FRAME(TYPE_MONSTER), 0),
+    ANIMCMD_END
+};
 
 const union AnimCmd *const sSpriteAnimTable_TypeIcons[] =
 {
-    [TYPE_NONE] =       sSpriteAnim_TypeIcon_Mystery,
+    [TYPE_NONE] =       sSpriteAnim_TypeIcon_Normal,
     [TYPE_NORMAL] =     sSpriteAnim_TypeIcon_Normal,
     [TYPE_FIGHTING] =   sSpriteAnim_TypeIcon_Fighting,
     [TYPE_FLYING] =     sSpriteAnim_TypeIcon_Flying,
@@ -165,7 +170,7 @@ const union AnimCmd *const sSpriteAnimTable_TypeIcons[] =
     [TYPE_BUG] =        sSpriteAnim_TypeIcon_Bug,
     [TYPE_GHOST] =      sSpriteAnim_TypeIcon_Ghost,
     [TYPE_STEEL] =      sSpriteAnim_TypeIcon_Steel,
-    [TYPE_MYSTERY] =    sSpriteAnim_TypeIcon_Mystery,
+    [TYPE_SOUND] =      sSpriteAnim_TypeIcon_Sound,
     [TYPE_FIRE] =       sSpriteAnim_TypeIcon_Fire,
     [TYPE_WATER] =      sSpriteAnim_TypeIcon_Water,
     [TYPE_GRASS] =      sSpriteAnim_TypeIcon_Grass,
@@ -175,7 +180,8 @@ const union AnimCmd *const sSpriteAnimTable_TypeIcons[] =
     [TYPE_DRAGON] =     sSpriteAnim_TypeIcon_Dragon,
     [TYPE_DARK] =       sSpriteAnim_TypeIcon_Dark,
     [TYPE_FAIRY] =      sSpriteAnim_TypeIcon_Fairy,
-    [TYPE_STELLAR] =    sSpriteAnim_TypeIcon_Mystery,
+    [TYPE_STELLAR] =    sSpriteAnim_TypeIcon_Normal,
+    [TYPE_MONSTER] =    sSpriteAnim_TypeIcon_Monster,
 };
 
 const struct CompressedSpritePalette sTypeIconPal1 =

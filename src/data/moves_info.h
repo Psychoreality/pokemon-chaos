@@ -21228,6 +21228,34 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .battleAnimScript = gBattleAnimMove_SoulStealing7StarStrike,
     },
+    [MOVE_MONSTER_MASH] =
+    {
+        .name = COMPOUND_STRING("Monster Mash"),
+        .description = sNullDescription,
+        .effect = EFFECT_HIT,
+        .power = 1,
+        .type = TYPE_MONSTER,
+        .accuracy = 0,
+        .pp = 1,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .battleAnimScript = gBattleAnimMove_TwinkleTackle,
+    },
+    [MOVE_SONIC_SHOCKWAVE] =
+    {
+        .name = COMPOUND_STRING("Sonic Shockwave"),
+        .description = sNullDescription,
+        .effect = EFFECT_HIT,
+        .power = 1,
+        .type = TYPE_SOUND,
+        .accuracy = 0,
+        .pp = 1,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_TwinkleTackle,
+    },
 
     [MOVE_MAX_GUARD] =
     {
@@ -22063,6 +22091,38 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .argument = MAX_EFFECT_BYPASS_PROTECT,
         .battleAnimScript = gBattleAnimMove_GMaxRapidFlow,
+    },
+
+    [MOVE_MAX_FRIGHTEN] =
+    {
+        .name = COMPOUND_STRING("Max Frighten"),
+        .description = sNullDescription,
+        .effect = EFFECT_MAX_MOVE,
+        .power = 10,
+        .type = TYPE_MONSTER,
+        .accuracy = 0,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .argument = MAX_EFFECT_RAISE_TEAM_ATTACK,
+        .battleAnimScript = gBattleAnimMove_MaxSteelspike,
+    },
+
+    [MOVE_MAX_VOLUME] =
+    {
+        .name = COMPOUND_STRING("Max Volume"),
+        .description = sNullDescription,
+        .effect = EFFECT_MAX_MOVE,
+        .power = 10,
+        .type = TYPE_SOUND,
+        .accuracy = 0,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .argument = MAX_EFFECT_RAISE_TEAM_SP_ATK,
+        .battleAnimScript = gBattleAnimMove_MaxSteelspike,
     },
 
 };
