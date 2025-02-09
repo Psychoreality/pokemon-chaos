@@ -2926,8 +2926,8 @@
       "name": "FieryPath_Layout",
       "width": 35,
       "height": 38,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "primary_tileset": "gTileset_CavesAltP",
+      "secondary_tileset": "gTileset_CavesAltS",
       "border_filepath": "data/layouts/FieryPath/border.bin",
       "blockdata_filepath": "data/layouts/FieryPath/map.bin"
     },
@@ -4416,8 +4416,8 @@
       "name": "FrozenBreach_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SootopolisGym",
+      "primary_tileset": "gTileset_CavesAltP",
+      "secondary_tileset": "gTileset_CavesAltS",
       "border_filepath": "data/layouts/FrozenBreach/border.bin",
       "blockdata_filepath": "data/layouts/FrozenBreach/map.bin"
     }

@@ -207,3 +207,9 @@ const u16 gMetatileAttributes_MysteryEventsHouse[] = INCBIN_U16("data/tilesets/s
 
 const u16 gMetatiles_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatiles.bin");
 const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatile_attributes.bin");
+
+const u16 gMetatiles_CavesAltP[] = INCBIN_U16("data/tilesets/primary/caves_alt_p/metatiles.bin");
+const u16 gMetatileAttributes_CavesAltP[] = INCBIN_U16("data/tilesets/primary/caves_alt_p/metatile_attributes.bin");
+
+const u16 gMetatiles_CavesAltS[] = INCBIN_U16("data/tilesets/secondary/caves_alt_s/metatiles.bin");
+const u16 gMetatileAttributes_CavesAltS[] = INCBIN_U16("data/tilesets/secondary/caves_alt_s/metatile_attributes.bin");
