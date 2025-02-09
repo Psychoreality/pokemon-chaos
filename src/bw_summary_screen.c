@@ -1157,6 +1157,14 @@ static const union AnimCmd sSpriteAnim_TypeStellar[] = {
     ANIMCMD_FRAME(TYPE_STELLAR * 8, 0, FALSE, FALSE),
     ANIMCMD_END
 };
+static const union AnimCmd sSpriteAnim_TypeMonster[] = {
+    ANIMCMD_FRAME(TYPE_MONSTER * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+static const union AnimCmd sSpriteAnim_TypeSound[] = {
+    ANIMCMD_FRAME(TYPE_SOUND * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
 static const union AnimCmd sSpriteAnim_CategoryCool[] = {
     ANIMCMD_FRAME((CONTEST_CATEGORY_COOL + NUMBER_OF_MON_TYPES) * 8, 0, FALSE, FALSE),
     ANIMCMD_END
@@ -1200,6 +1208,8 @@ static const union AnimCmd *const sSpriteAnimTable_MoveTypes[NUMBER_OF_MON_TYPES
     [TYPE_DARK] = sSpriteAnim_TypeDark,
     [TYPE_FAIRY] = sSpriteAnim_TypeFairy,
     [TYPE_STELLAR] = sSpriteAnim_TypeStellar,
+    [TYPE_MONSTER] = sSpriteAnim_TypeMonster,
+    [TYPE_SOUND] = sSpriteAnim_TypeSound,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_COOL] = sSpriteAnim_CategoryCool,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_BEAUTY] = sSpriteAnim_CategoryBeauty,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_CUTE] = sSpriteAnim_CategoryCute,
@@ -1322,6 +1332,14 @@ static const union AnimCmd sSpriteAnim_TeraTypeStellar[] = {
     ANIMCMD_FRAME(TYPE_STELLAR * 4, 0, FALSE, FALSE),
     ANIMCMD_END
 };
+static const union AnimCmd sSpriteAnim_TeraTypeMonster[] = {
+    ANIMCMD_FRAME(TYPE_MONSTER * 4, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+static const union AnimCmd sSpriteAnim_TeraTypeSound[] = {
+    ANIMCMD_FRAME(TYPE_SOUND * 4, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
 
 static const union AnimCmd *const sSpriteAnimTable_TeraType[NUMBER_OF_MON_TYPES] = {
     [TYPE_NONE] = sSpriteAnim_TeraTypeNone,
@@ -1344,7 +1362,9 @@ static const union AnimCmd *const sSpriteAnimTable_TeraType[NUMBER_OF_MON_TYPES]
     [TYPE_DRAGON] = sSpriteAnim_TeraTypeDragon,
     [TYPE_DARK] = sSpriteAnim_TeraTypeDark,
     [TYPE_FAIRY] = sSpriteAnim_TeraTypeFairy,
-    [TYPE_STELLAR] = sSpriteAnim_TeraTypeStellar
+    [TYPE_STELLAR] = sSpriteAnim_TeraTypeStellar,
+    [TYPE_MONSTER] = sSpriteAnim_TeraTypeMonster,
+    [TYPE_SOUND] = sSpriteAnim_TeraTypeSound
 };
 
 static const struct OamData sOamData_TeraType =

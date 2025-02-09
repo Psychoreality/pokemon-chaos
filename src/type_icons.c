@@ -208,7 +208,7 @@ const struct OamData sOamData_TypeIcons =
 const struct CompressedSpriteSheet sSpriteSheet_TypeIcons2 =
 {
     .data = gBattleIcons_Gfx2,
-    .size = (8*16) * 9,
+    .size = (8*16) * 10,
     .tag = TYPE_ICON_TAG_2,
 };
 

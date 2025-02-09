@@ -462,7 +462,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     {
         .name = _("Monster"),
         .generic = _("a Monster move"),
-        .palette = 16,
+        .palette = 15,
         .zMove = MOVE_MONSTER_MASH,
         .maxMove = MOVE_MAX_FRIGHTEN,
         .teraTypeRGBValue = RGB(28, 49, 32),
@@ -483,7 +483,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     {
         .name = _("Sound"),
         .generic = _("a Sound move"),
-        .palette = 17,
+        .palette = 14,
         .zMove = MOVE_SONIC_SHOCKWAVE,
         .maxMove = MOVE_MAX_VOLUME,
         .teraTypeRGBValue = RGB(31, 15, 21),
