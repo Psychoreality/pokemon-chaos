@@ -22581,7 +22581,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .argument = MAX_EFFECT_RAISE_TEAM_ATTACK,
+        .argument = MOVE_EFFECT_RAISE_TEAM_ATTACK,
         .battleAnimScript = gBattleAnimMove_MaxSteelspike,
     },
 
@@ -22597,8 +22597,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .argument = MAX_EFFECT_RAISE_TEAM_SP_ATK,
+        .argument = MOVE_EFFECT_RAISE_TEAM_SP_ATK,
         .battleAnimScript = gBattleAnimMove_MaxSteelspike,
     },
-
 };
