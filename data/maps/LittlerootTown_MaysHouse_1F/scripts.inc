@@ -14,8 +14,8 @@ LittlerootTown_MaysHouse_1F_OnLoad:
 	end
 
 LittlerootTown_MaysHouse_1F_EventScript_SetMovingBoxes::
-	setmetatile 5, 4, METATILE_BrendansMaysHouse_MovingBox_Open, TRUE
-	setmetatile 5, 2, METATILE_BrendansMaysHouse_MovingBox_Closed, TRUE
+	setmetatile 5, 4, 0x870, TRUE
+	setmetatile 5, 2, 0x868, TRUE
 	return
 
 LittlerootTown_MaysHouse_1F_EventScript_CheckShowShoesManual::
