@@ -48,21 +48,21 @@
 #define SEARCHLEVEL50_ITEM              6
 #define SEARCHLEVEL100_ITEM             12
 // Chance of encountering one star potential
-#define SEARCHLEVEL0_ONESTAR            0
+#define SEARCHLEVEL0_ONESTAR            33
 #define SEARCHLEVEL5_ONESTAR            14
 #define SEARCHLEVEL10_ONESTAR           17
 #define SEARCHLEVEL25_ONESTAR           17
 #define SEARCHLEVEL50_ONESTAR           15
 #define SEARCHLEVEL100_ONESTAR          8
 // Chance of encountering two star potential
-#define SEARCHLEVEL0_TWOSTAR            0
+#define SEARCHLEVEL0_TWOSTAR            33
 #define SEARCHLEVEL5_TWOSTAR            1
 #define SEARCHLEVEL10_TWOSTAR           9
 #define SEARCHLEVEL25_TWOSTAR           16
 #define SEARCHLEVEL50_TWOSTAR           17
 #define SEARCHLEVEL100_TWOSTAR          24
 // Chance of encountering three star potential
-#define SEARCHLEVEL0_THREESTAR          0
+#define SEARCHLEVEL0_THREESTAR          33
 #define SEARCHLEVEL5_THREESTAR          0
 #define SEARCHLEVEL10_THREESTAR         1
 #define SEARCHLEVEL25_THREESTAR         7
