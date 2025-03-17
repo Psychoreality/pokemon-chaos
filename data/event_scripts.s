@@ -1156,3 +1156,7 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/FrozenBreach/scripts.inc"
 	.include "data/scripts/dexnav.inc"
+
+	.include "data/maps/MirageTower_B1F/scripts.inc"
+
+	.include "data/maps/MirageTower_B2F/scripts.inc"
