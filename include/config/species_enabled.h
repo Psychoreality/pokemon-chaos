@@ -596,7 +596,7 @@
 #define P_FAMILY_OKIDOGI                 P_GEN_9_POKEMON
 #define P_FAMILY_MUNKIDORI               P_GEN_9_POKEMON
 #define P_FAMILY_FEZANDIPITI             P_GEN_9_POKEMON
-#define P_FAMILY_OGERPON                 P_GEN_9_POKEMON
+#define P_FAMILY_OGERPON                 FALSE
 #define P_FAMILY_GOUGING_FIRE            FALSE
 #define P_FAMILY_RAGING_BOLT             FALSE
 #define P_FAMILY_IRON_BOULDER            FALSE
